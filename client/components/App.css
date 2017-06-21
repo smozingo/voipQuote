@@ -1,0 +1,361 @@
+body {
+    margin-top: 51px;
+    background-color: rgb(232, 225, 217);
+    background-image: url('../img/telezen_background_light.jpg');
+    background-repeat: no-repeat;
+
+    color: whitesmoke;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+#wrapper {
+    min-width: 950px;
+}
+
+table {
+    display: block;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+h4 {
+    color: rgb(255, 160, 48);
+}
+
+input {
+    color: #1f1f1f;
+    padding-left: 5px;
+    border-radius: 15px;
+    outline: none;
+}
+
+header {
+    top: -55px;
+    height: 70px;
+    margin-bottom: -50px;
+    background-color: rgba(255, 209, 140, 0.7);
+    position: relative;
+}
+
+.nav {
+    padding-left: inherit;
+}
+
+#navTabs {
+    position: relative;
+    left: -800px;
+}
+
+.inputCredentials {
+    min-width: 350px;
+    margin:10px 0 10px 0;
+}
+
+.inputSelect {
+    min-width: 195px;
+}
+
+/* Put the login bar on top of the dimmer */
+#loginBar {
+    position:relative;
+    z-index: 12;
+}
+
+#loginResultBox {
+    position: relative;
+    top: 22px;
+    font-size: 1.2em;
+    left: 80px;
+    margin-bottom:10px;
+}
+
+.navbar-brand {
+    margin-bottom: 15px;
+}
+
+#logo {
+    height: 50px;
+    margin: 10px;
+}
+
+#welcomeBox {
+    position: relative;
+    padding: 20px 0 20px 20px;
+    color: rgb(255, 230, 192);
+    border: 1px solid saddlebrown;
+    background: url('../img/call-center.jpg') no-repeat;
+    background-position-x: 50%;
+    background-position-y: 37%;
+    background-size: cover;
+}
+
+
+#nsApiLogo {
+    width: 500px;
+    margin: -15px 0 -15px 30px;
+}
+
+
+.contentDiv {
+    background: rgba(247, 196, 143, 0.45) no-repeat center;
+    background-size: cover;
+    border: 1px solid saddlebrown;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin: 10px auto 10px auto;
+    position: relative;
+    color: whitesmoke;
+    width: 95%;
+    min-width: 750px;
+}
+
+.contentDiv p {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.contentDiv a {
+    color: #dad8ff;
+}
+
+.contentDiv li {
+    margin-bottom:10px;
+}
+
+/* Customize the tabs */
+.nav-tabs {
+    margin-top: 10px;
+    border-bottom: none;
+}
+
+.floatLeft {
+    position:relative;
+    float:left;
+}
+
+.floatRight {
+    position:relative;
+    float:right;
+}
+
+.nav-tabs>li {
+    background-color: rgba(107, 75, 0, 0.56);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus  {
+    color: #fefffd;
+    cursor: default;
+    background-color: rgba(140, 80, 60, 0.8);
+    border: 1px solid rgba(63, 63, 63, 0.74);
+    border-bottom-color: transparent;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: rgba(140, 80, 60, 0.8);
+    border: 1px solid rgba(63, 63, 63, 0.74);
+}
+
+.nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .nav-tabs>li>a:hover {
+    color: #fefffd;
+    cursor: default;
+    background-color: rgba(140, 80, 60, 0.8);
+    border: 1px solid rgba(63, 63, 63, 0.74);
+    border-bottom-color: transparent;
+}
+
+.tab-content {
+    position: relative;
+    top: -31px;
+}
+
+.dropdown-menu {
+    color: #fefffd;
+    cursor: default;
+    background-color: rgba(255, 187, 0, 0.96);
+    border: 1px solid rgba(63, 63, 63, 0.74);
+    border-bottom-color: transparent;
+}
+
+.dropdown-menu>li>a:hover {
+    color: #fefffd;
+    background-color: rgba(255, 160, 48, 0.75);
+    border-bottom-color: transparent;
+    background-image: url(img); /* this is the only way that I can get background-color to stick for some reason*/
+}
+
+#queryTab .row {
+    margin-left:0;
+}
+
+.queryInstructions {
+    font-size: .9em;
+}
+
+
+.queryInstructions strong {
+    color: #ffbb00;
+}
+
+.stepBox {
+    padding: 10px 10px 25px 10px;
+    width:100%;
+    background-color: rgba(140, 80, 60, 0.5);
+    position: relative;
+    margin: 20px auto;
+    border: 1px solid saddlebrown;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.stepText {
+    position: relative;
+    float:left;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    border: 1px solid saddlebrown;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius:10px;
+    width: 45%;
+    height: 85%;
+    background: rgba(255, 187, 0, 0.9);
+}
+
+table {
+    width: 100%;
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+    float: left !important;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
+
+.requiredInput {
+    border-color: red;
+}
+
+.wButton {
+    border: 1px solid #ffbb00;
+    background: #ffa030 no-repeat center;
+    background-size: cover;
+    margin: 3px;
+}
+
+.wButton:hover {
+    border: 1px solid #ffbb00;
+    background-color: #ffa030;
+    cursor: pointer;
+    color: saddlebrown;
+}
+
+.bigButton {
+    width: 170px;
+    height: 55px;
+    font-weight: bold;
+    font-size: .7em;
+}
+
+.btnInstructions {
+    border: 1px solid #ffbb00;
+    background: #ffa030;
+    background-size: cover;
+    margin: 3px 3px 3px 18px;
+}
+
+.centerBlock {
+    display: table;
+    margin: 0 auto;
+}
+
+
+#copyright {
+    padding:0;
+    text-align: center;
+    margin: 5px auto;
+    font-size: .7em;
+
+}
+
+input.currency {
+    text-align: right;
+    padding-right: 15px;
+}
+.input-group .form-control {
+    float: none;
+}
+.input-group .input-buttons {
+    position: relative;
+    z-index: 3;
+}
+
+.settings-input {
+    width:500px;
+}
+
+#seatSettings label, #phoneNumbers label {
+    width:250px;
+}
+
+#customerSettings label {
+    width:280px;
+    font-size:1.2em;
+}
+
+#customerSettings input {
+    width: 150px;
+    padding-right: 15px;
+}
+
+.input-group-addon:not(:first-child):not(:last-child) {
+    margin-left:3px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.discount-group {
+    float: left;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 60%;
+}
+
+.discount-group-addon {
+    height:33px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-yw4l{vertical-align:top}
