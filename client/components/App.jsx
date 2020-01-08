@@ -2,128 +2,131 @@ import React, { Component } from 'react';
 import Header from './Header.jsx';
 import Content from './Content.jsx';
 
-function getInitialState() {
-  return {
-    additionalFeaturesMonthlyTotal: 0,
-    additionalTollFreeDIDs: 0,
-    additionalLocalDIDs: 0,
-    callCenterExtensions: 0,
-    companyName: '',
-    extendedRecordingRetention: false,
-    faxing: false,
-    faxDIDs: 0,
-    faxingPrice: 0,
-    finalDiscount: 0,
-    hardwareGrandTotal: 0,
-    name: '',
-    numbersToPort: 0,
-    oneTimeSubtotal: 0,
-    oneTimeTotal: 0,
-    monthlyTotal: 0,
-    paymentOption: '',
-    printArea: '',
-    recordingRetentionPrice: 0,
-    savings: 0,
-    salesTax: 0,
-    shippingTotal: 0,
-    standardExtensions: 0,
-    subtotal: 0,
-    subtotalAdditionalFeatures: 0,
-    subtotalNumbers: 0,
-    subtotalPhones: 0,
-    subtotalPorting: 0,
-    subtotalService: 0,
-    subtotalSetup: 0,
-    subtotalShipping: 0,
-    totalAccessories: 0,
-    totalAdditionalFeatures: 0,
-    totalCallPaths: 0,
-    totalExtensions: 0,
-    totalPhones: 0,
-    totalNumbers: 0,
-    totalService: 0,
-    totalSetup: 0,
-    totalTollFreeDIDs: 0,
-    costPer800DID: 2.00,
-    costPerLocalDID: 1.00,
-    costPerCallCenterExt: 24.99,
-    costPerFaxLine: 9.99,
-    costPerStandardExt: 19.99,
-    costExtRecordingPerExt: 1.00,
-    pathsPerCCExtension: 0.75,
-    pathsPerStandardExtension: 0.2,
-    portingPriceDID: 9.00,
-    setupPriceExt: 9.99,
-    taxRate: 9.0,
-    discount: [
-      { minSeats: 1,    maxSeats: 25,     discount: 0 },
-      { minSeats: 26,   maxSeats: 75,     discount: .05 },
-      { minSeats: 76,   maxSeats: 200,    discount: .10 },
-      { minSeats: 201,  maxSeats: 1000,   discount: .15 },
-      { minSeats: 1001, maxSeats: 999999, discount: .20 },
-    ],
-    hardware: [
-      { item: 'Yealink SIP-T41', type: 'Phone', img: 'client/img/T41.jpg',
-        features: [
-          'Mid-range Phone',
-          'Elegant mid-range Desk Phone with HD voice',
-          '2.7" 192x64-pixel graphical LCD with backlight',
-          'Up to 6 SIP accounts',
-          'Paper label free design',
-          'Dual 10/100 mbps Ethernet Ports',
-          'PoE (Power Over Ethernet) support',
-          'Headset, EHS support',
-          'Integrated stand with 2 adjustable angles',
-          'Wall mountable (Requires wall-mount bracket)',
-        ], msrp: 139.00, purchasePrice: 99.00, rentalPrice: 6.49, count: 0, subtotal: 0,
-      },
-      { item: 'Yealink SIP-T46' , type: 'Phone', img: 'client/img/T46.jpg',
-        features: [
-          'Manager Phone / Receptionist Phone',
-          'Elegant high-end Desk Phone with HD voice',
-          '4.3" 480 x 272-pixel color display with backlight',
-          'Built-in a USB port, supports Bluetooth headset (Through USB Dongle)',
-          'Up to 16 SIP accounts',
-          'Paper label free design',
-          'Dual Gigabit Ethernet Ports',
-          'PoE (Power Over Ethernet) support',
-          'Headset, EHS support',
-          'Supports expansion modules (up to 3)',
-          'Stand with 2 adjustable angles',
-          'Wall mountable (Requires wall-mount bracket)',
-        ], msrp: 269.00, purchasePrice: 169.00, rentalPrice: 10.49, count: 0, subtotal: 0,
-      },
-      { item: 'Yealink SIP-T48' , type: 'Phone', img: 'client/img/T48.jpg',
-        features: [
-          'Executive Phone',
-          'Elegant Executive Desk Phone with Touch-Screen LCD & HD voice',
-          '7" 800 x 480-pixel color touch screen with backlight',
-          'Built-in a USB port, supports Bluetooth headset (Through USB Dongle)',
-          'Up to 16 SIP accounts',
-          'Paper label free design',
-          'Dual Gigabit Ethernet Ports',
-          'PoE (Power Over Ethernet) support',
-          'Headset, EHS support',
-          'Supports expansion modules (up to 3)',
-          'Stand with 2 adjustable angles',
-          'Wall mountable (Requires wall-mount bracket)',
-        ], msrp: 349.00, purchasePrice: 219.00, rentalPrice: 14.99, count: 0, subtotal: 0,
-      },
-    ],
-  };
-}
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.seatCount = this.seatCount.bind(this);
-    this.getLocalDIDs = this.getLocalDIDs.bind(this);
-    this.getTollFreeDIDs = this.getTollFreeDIDs.bind(this);
+
+    // set up application state
+    this.state = {
+      additionalFeaturesMonthlyTotal: 0,
+      additionalTollFreeDIDs: 0,
+      additionalLocalDIDs: 0,
+      callCenterExtensions: 0,
+      companyName: '',
+      extendedRecordingRetention: false,
+      faxing: false,
+      faxDIDs: 0,
+      faxingPrice: 0,
+      finalDiscount: 0,
+      hardwareGrandTotal: 0,
+      name: '',
+      numbersToPort: 0,
+      oneTimeSubtotal: 0,
+      oneTimeTotal: 0,
+      monthlyTotal: 0,
+      paymentOption: '',
+      printArea: '',
+      recordingRetentionPrice: 0,
+      savings: 0,
+      salesTax: 0,
+      shippingTotal: 0,
+      standardExtensions: 0,
+      subtotal: 0,
+      subtotalAdditionalFeatures: 0,
+      subtotalNumbers: 0,
+      subtotalPhones: 0,
+      subtotalPorting: 0,
+      subtotalService: 0,
+      subtotalSetup: 0,
+      subtotalShipping: 0,
+      totalAccessories: 0,
+      totalAdditionalFeatures: 0,
+      totalCallPaths: 0,
+      totalExtensions: 0,
+      totalPhones: 0,
+      totalNumbers: 0,
+      totalService: 0,
+      totalSetup: 0,
+      totalTollFreeDIDs: 0,
+      costPer800DID: 2.00,
+      costPerLocalDID: 1.00,
+      costPerCallCenterExt: 24.99,
+      costPerFaxLine: 9.99,
+      costPerStandardExt: 19.99,
+      costExtRecordingPerExt: 1.00,
+      pathsPerCCExtension: 0.75,
+      pathsPerStandardExtension: 0.2,
+      portingPriceDID: 9.00,
+      setupPriceExt: 9.99,
+      taxRate: 9.0,
+      discount: [
+        { minSeats: 1,    maxSeats: 25,     discount: 0 },
+        { minSeats: 26,   maxSeats: 75,     discount: .05 },
+        { minSeats: 76,   maxSeats: 200,    discount: .10 },
+        { minSeats: 201,  maxSeats: 1000,   discount: .15 },
+        { minSeats: 1001, maxSeats: 999999, discount: .20 },
+      ],
+      hardware: [
+        { item: 'Yealink SIP-T41', type: 'Phone', img: 'client/img/T41.jpg',
+          features: [
+            'Mid-range Phone',
+            'Elegant mid-range Desk Phone with HD voice',
+            '2.7" 192x64-pixel graphical LCD with backlight',
+            'Up to 6 SIP accounts',
+            'Paper label free design',
+            'Dual 10/100 mbps Ethernet Ports',
+            'PoE (Power Over Ethernet) support',
+            'Headset, EHS support',
+            'Integrated stand with 2 adjustable angles',
+            'Wall mountable (Requires wall-mount bracket)',
+          ], msrp: 139.00, purchasePrice: 99.00, rentalPrice: 6.49, count: 0, subtotal: 0,
+        },
+        { item: 'Yealink SIP-T46' , type: 'Phone', img: 'client/img/T46.jpg',
+          features: [
+            'Manager Phone / Receptionist Phone',
+            'Elegant high-end Desk Phone with HD voice',
+            '4.3" 480 x 272-pixel color display with backlight',
+            'Built-in a USB port, supports Bluetooth headset (Through USB Dongle)',
+            'Up to 16 SIP accounts',
+            'Paper label free design',
+            'Dual Gigabit Ethernet Ports',
+            'PoE (Power Over Ethernet) support',
+            'Headset, EHS support',
+            'Supports expansion modules (up to 3)',
+            'Stand with 2 adjustable angles',
+            'Wall mountable (Requires wall-mount bracket)',
+          ], msrp: 269.00, purchasePrice: 169.00, rentalPrice: 10.49, count: 0, subtotal: 0,
+        },
+        { item: 'Yealink SIP-T48' , type: 'Phone', img: 'client/img/T48.jpg',
+          features: [
+            'Executive Phone',
+            'Elegant Executive Desk Phone with Touch-Screen LCD & HD voice',
+            '7" 800 x 480-pixel color touch screen with backlight',
+            'Built-in a USB port, supports Bluetooth headset (Through USB Dongle)',
+            'Up to 16 SIP accounts',
+            'Paper label free design',
+            'Dual Gigabit Ethernet Ports',
+            'PoE (Power Over Ethernet) support',
+            'Headset, EHS support',
+            'Supports expansion modules (up to 3)',
+            'Stand with 2 adjustable angles',
+            'Wall mountable (Requires wall-mount bracket)',
+          ], msrp: 349.00, purchasePrice: 219.00, rentalPrice: 14.99, count: 0, subtotal: 0,
+        },
+      ],
+    }
+
+    // bind methods to App
+    this.seatCount        = this.seatCount.bind(this);
+    this.getLocalDIDs     = this.getLocalDIDs.bind(this);
+    this.getTollFreeDIDs  = this.getTollFreeDIDs.bind(this);
+    this.getFaxDIDs       = this.getFaxDIDs.bind(this);
+    this.getPortNumbers   = this.getPortNumbers.bind(this);
+    this.monetize         = this.monetize.bind(this);
+    this.getHardware      = this.getHardware.bind(this);
     this.toggleRecordingRetention = this.toggleRecordingRetention.bind(this);
-    this.getFaxDIDs = this.getFaxDIDs.bind(this);
-    this.getPortNumbers = this.getPortNumbers.bind(this);
-    this.monetize = this.monetize.bind(this);
-    this.state = getInitialState();
+
   }
 
   monetize(amount) {
@@ -144,80 +147,29 @@ class App extends Component {
     return 0;
   }
 
-  getHardware(event) {
-    const id = '#' + event.target.id;
-    console.log('getHardware', event.target.id, 'value', Number($(id)[0].value));
-    let hardware = Number($(id)[0].value);
-    console.log("Fuck");
-    /*this.setState({ hardware[index].subtotal: hardware });*/
+  getMonthlyTotal(val) {
+    return (val +
+      this.state.totalService +
+      this.state.totalPhones +
+      this.state.totalNumbers +
+      this.state.totalAdditionalFeatures +
+      this.state.totalExtensions +
+      this.state.totalSetup);
   }
-
-  seatCount(event) {
-    const id = '#' + event.target.id;
-    console.log('seatCount', event.target.id, 'value', Number($(id)[0].value));
-    let state = this.state;
-    if (event.target.id === 'BoSeats') {
-      let standardExt     = Number($(id)[0].value);
-      let totalExtensions = standardExt + state.callCenterExtensions;
-      let totalCallPaths  = Math.ceil(standardExt * state.pathsPerStandardExtension +
-        state.callCenterExtensions * state.pathsPerCCExtension);
-      let extRecRetentionPrice = totalExtensions * state.costExtRecordingPerExt;
-      let subtotalSetup   = totalExtensions * state.setupPriceExt;
-      let totalSetup      = Number(subtotalSetup) + Number(state.subtotalPorting);
-      let subtotalService = (standardExt * state.costPerStandardExt) +
-        (state.callCenterExtensions * state.costPerCallCenterExt);
-      let discount        = this.getDiscount(totalExtensions);
-      let savings         = discount ? Math.floor(subtotalService * discount) : 0;
-      let totalService    = subtotalService - savings;
-
-      this.setState({ standardExtensions: standardExt,
-                      totalExtensions: totalExtensions,
-                      totalCallPaths: totalCallPaths,
-                      recordingRetentionPrice: extRecRetentionPrice,
-                      subtotalSetup: subtotalSetup,
-                      totalSetup: totalSetup,
-                      subtotalService: subtotalService,
-                      finalDiscount: discount,
-                      savings: savings,
-                      totalService: totalService,
-                    });
-
-    } else if (event.target.id === 'CcSeats') {
-      let ccExt           = Number($(id)[0].value);
-      let totalExtensions = ccExt + state.standardExtensions;
-      let totalCallPaths  = Math.ceil(ccExt * state.pathsPerCCExtension +
-        state.standardExtensions * state.pathsPerStandardExtension);
-      let extRecRetentionPrice = totalExtensions * state.costExtRecordingPerExt;
-      let subtotalSetup   = totalExtensions * state.setupPriceExt;
-      let totalSetup      = Number(subtotalSetup) + Number(state.subtotalPorting);
-      let subtotalService = (ccExt * state.costPerCallCenterExt) +
-        (state.standardExtensions * state.costPerStandardExt);
-      let discount        = this.getDiscount(totalExtensions);
-      let savings         = discount ? subtotalService - (subtotalService * discount) : 0;
-      let totalService    = subtotalService - savings;
-
-      this.setState({ callCenterExtensions: ccExt,
-                      totalExtensions: totalExtensions,
-                      totalCallPaths: totalCallPaths,
-                      recordingRetentionPrice: extRecRetentionPrice,
-                      subtotalSetup: subtotalSetup,
-                      totalSetup: totalSetup,
-                      subtotalService: subtotalService,
-                      finalDiscount: discount,
-                      savings: savings,
-                      totalService: totalService,
-                    });
-    }
-  }
-
   getLocalDIDs(event) {
     const id = '#' + event.target.id;
     console.log('getLocalDIDs', event.target.id, 'value', $(id)[0].value);
     let localDIDs = $(id)[0].value;
     let totalNumbers = (this.state.additionalTollFreeDIDs * this.state.costPer800DID) +
       (localDIDs * this.state.costPerLocalDID);
+
+    let monthlyTotal = localDIDs < this.state.additionalLocalDIDs ?
+      this.getMonthlyTotal(this.state.costPerLocalDID) :
+      this.getMonthlyTotal(this.state.costPerLocalDID * -1);
+
     this.setState({ additionalLocalDIDs: localDIDs,
-                    totalNumbers: totalNumbers, });
+                    totalNumbers: totalNumbers,
+                    monthlyTotal: monthlyTotal});
   }
 
   getTollFreeDIDs(event) {
@@ -256,6 +208,84 @@ class App extends Component {
                   });
   }
 
+
+  seatCount(event) {
+    const id = '#' + event.target.id;
+    console.log('seatCount', event.target.id, 'value', Number($(id)[0].value));
+    let state = this.state;
+    if (event.target.id === 'BoSeats') {
+      let standardExt     = Number($(id)[0].value);
+      let totalExtensions = standardExt + state.callCenterExtensions;
+      let totalCallPaths  = Math.ceil(standardExt * state.pathsPerStandardExtension +
+        state.callCenterExtensions * state.pathsPerCCExtension);
+      let extRecRetentionPrice = totalExtensions * state.costExtRecordingPerExt;
+      let subtotalSetup   = totalExtensions * state.setupPriceExt;
+      let totalSetup      = Number(subtotalSetup) + Number(state.subtotalPorting);
+      let subtotalService = (standardExt * state.costPerStandardExt) +
+        (state.callCenterExtensions * state.costPerCallCenterExt);
+      let discount        = this.getDiscount(totalExtensions);
+      let savings         = discount ? subtotalService - Math.floor(subtotalService * discount) : 0;
+      let totalService    = subtotalService - savings;
+
+      this.setState({ standardExtensions: standardExt,
+        totalExtensions: totalExtensions,
+        totalCallPaths: totalCallPaths,
+        recordingRetentionPrice: extRecRetentionPrice,
+        subtotalSetup: subtotalSetup,
+        totalSetup: totalSetup,
+        subtotalService: subtotalService,
+        finalDiscount: discount,
+        savings: savings,
+        totalService: totalService,
+      });
+
+    } else if (event.target.id === 'CcSeats') {
+      let ccExt           = Number($(id)[0].value);
+      let totalExtensions = ccExt + state.standardExtensions;
+      let totalCallPaths  = Math.ceil(ccExt * state.pathsPerCCExtension +
+        state.standardExtensions * state.pathsPerStandardExtension);
+      let extRecRetentionPrice = totalExtensions * state.costExtRecordingPerExt;
+      let subtotalSetup   = totalExtensions * state.setupPriceExt;
+      let totalSetup      = Number(subtotalSetup) + Number(state.subtotalPorting);
+      let subtotalService = (ccExt * state.costPerCallCenterExt) +
+        (state.standardExtensions * state.costPerStandardExt);
+      let discount        = this.getDiscount(totalExtensions);
+      let savings         = discount ? subtotalService - (subtotalService * discount) : 0;
+      let totalService    = subtotalService - savings;
+
+      this.setState({ callCenterExtensions: ccExt,
+        totalExtensions: totalExtensions,
+        totalCallPaths: totalCallPaths,
+        recordingRetentionPrice: extRecRetentionPrice,
+        subtotalSetup: subtotalSetup,
+        totalSetup: totalSetup,
+        subtotalService: subtotalService,
+        finalDiscount: discount,
+        savings: savings,
+        totalService: totalService,
+      });
+    }
+  }
+
+  getHardware(event) {
+    const id = '#' + event.target.id;
+    console.log('getHardware', event.target.id, 'value', Number($(id)[0].value));
+    let count = Number($(id)[0].value);
+    const index = event.target.id.match(/hw(\d*)/);
+    const hardware = Object.assign({}, this.state.hardware);
+    console.log(hardware[index[1]]);
+    let totalPhones = this.state.totalPhones;
+    if ( count > hardware[index[1]].count ) {
+      totalPhones += hardware[index[1]].purchasePrice;
+    } else {
+      totalPhones -= hardware[index[1]].purchasePrice;
+    }
+    hardware[index[1]].count = count;
+    const subtotal = hardware[index[1]].subtotal = count * hardware[index[1]].purchasePrice;
+    this.setState({totalPhones: totalPhones});
+    this.setState(hardware);
+  }
+
   getPortNumbers(event) {
     const id = '#' + event.target.id;
     console.log('getPortNumbers', event.target.id, 'value', $(id)[0].value);
@@ -279,6 +309,9 @@ class App extends Component {
           getTollFreeDIDs={this.getTollFreeDIDs}
           toggleRecordingRetention={this.toggleRecordingRetention}
           getFaxDIDs={this.getFaxDIDs}
+          getHardware={this.getHardware}
+          getPortNumbers={this.getPortNumbers}
+          monetize={this.monetize}
           totalCallPaths={this.state.totalCallPaths}
           recordingRetentionPrice={this.state.recordingRetentionPrice}
           faxingPrice={this.state.faxingPrice}
@@ -289,8 +322,6 @@ class App extends Component {
           numbersToPort={this.state.numbersToPort}
           subtotalPorting={this.state.subtotalPorting}
           totalSetup={this.state.totalSetup}
-          getPortNumbers={this.getPortNumbers}
-          monetize={this.monetize}
           subtotalService={this.state.subtotalService}
           totalService={this.state.totalService}
           standardExtensions={this.state.standardExtensions}
@@ -311,7 +342,7 @@ class App extends Component {
           oneTimeTotal={this.state.oneTimeTotal}
           shippingTotal={this.state.shippingTotal}
           hardware={this.state.hardware}
-          getHardware={this.getHardware}
+          totalPhones={this.state.totalPhones}
         />
       </div>
     );

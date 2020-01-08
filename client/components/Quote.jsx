@@ -69,7 +69,7 @@ const Quote = (props) => (
             <td className="tg-hw1d"></td>
             <td className="tg-hw1d"></td>
             <td className="tg-6rl8"></td>
-            <td className="tg-6rl8">Monthly</td>
+            <td className="tg-6rl8"></td>
             <td className="tg-00vd">{props.monetize(props.totalPhones)}</td>
           </tr>
           <tr>
@@ -150,58 +150,71 @@ const Quote = (props) => (
             <td className="tg-oq8k"></td>
             <td className="tg-ib9w">{props.monetize(props.totalSetup)}</td>
           </tr>
-          <tr>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-riad">One Time Subtotal</td>
-            <td className="tg-1szg">{props.monetize(props.oneTimeSubtotal)}</td>
-            <td className="tg-77vb"></td>
-            <td className="tg-6w06">Monthly Total</td>
-            <td className="tg-pcbx">{props.monetize(props.monthlyTotal)}</td>
-          </tr>
-          <tr>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-reyo">Sales Tax</td>
-            <td className="tg-reyo">{props.monetize(props.salesTax)}</td>
-            <td className="tg-ceei"></td>
-            <td className="tg-qi9z">+ taxes and fees</td>
-            <td className="tg-hykm"></td>
-          </tr>
-          <tr>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-reyo">Shipping</td>
-            <td className="tg-reyo">{props.monetize(props.shippingTotal)}</td>
-            <td className="tg-ceei"></td>
-            <td className="tg-8fi1"></td>
-            <td className="tg-hykm"></td>
-          </tr>
-          <tr>
-            <td className="tg-l778"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-l779"></td>
-            <td className="tg-riad">One Time Total</td>
-            <td className="tg-riad">{props.monetize(props.oneTimeTotal)}</td>
-            <td className="tg-ceei"></td>
-            <td className="tg-8fi1"></td>
-            <td className="tg-hykm1"></td>
-          </tr>
+          {/*<tr>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*/!*<td className="tg-riad">One Time Subtotal</td>*!/*/}
+            {/*/!*<td className="tg-1szg">{props.monetize(props.oneTimeSubtotal)}</td>*!/*/}
+            {/*/!*<td className="tg-77vb"></td>*!/*/}
+            {/*<td className="tg-riad"></td>*/}
+            {/*<td className="tg-1szg"></td>*/}
+            {/*<td className="tg-77vb"></td>*/}
+            {/*<td className="tg-6w06"></td>*/}
+            {/*<td className="tg-pcbx"></td>*/}
+            {/*/!*<td className="tg-6w06">Monthly Total</td>*!/*/}
+            {/*/!*<td className="tg-pcbx">{props.monetize(props.monthlyTotal)}</td>*!/*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*/!*<td className="tg-reyo">Sales Tax</td>*!/*/}
+            {/*/!*<td className="tg-reyo">{props.monetize(props.salesTax)}</td>*!/*/}
+            {/*/!*<td className="tg-ceei"></td>*!/*/}
+            {/*/!*<td className="tg-qi9z">+ taxes and fees</td>*!/*/}
+            {/*<td className="tg-reyo"></td>*/}
+            {/*<td className="tg-reyo"></td>*/}
+            {/*<td className="tg-ceei"></td>*/}
+            {/*<td className="tg-qi9z"></td>*/}
+            {/*<td className="tg-hykm"></td>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*/!*<td className="tg-reyo">Shipping</td>*!/*/}
+            {/*/!*<td className="tg-reyo">{props.monetize(props.shippingTotal)}</td>*!/*/}
+            {/*<td className="tg-reyo"></td>*/}
+            {/*<td className="tg-reyo"></td>*/}
+            {/*<td className="tg-ceei"></td>*/}
+            {/*<td className="tg-8fi1"></td>*/}
+            {/*<td className="tg-hykm"></td>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+            {/*<td className="tg-l778"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*<td className="tg-l779"></td>*/}
+            {/*/!*<td className="tg-riad">One Time Total</td>*!/*/}
+            {/*/!*<td className="tg-riad">{props.monetize(props.oneTimeTotal)}</td>*!/*/}
+            {/*<td className="tg-riad"></td>*/}
+            {/*<td className="tg-riad"></td>*/}
+            {/*<td className="tg-ceei"></td>*/}
+            {/*<td className="tg-8fi1"></td>*/}
+            {/*<td className="tg-hykm1"></td>*/}
+          {/*</tr>*/}
         </table>
       </div>
     </div>
