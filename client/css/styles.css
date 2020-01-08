@@ -3,7 +3,6 @@ body {
     background-color: rgb(232, 225, 217);
     background-image: url('../img/telezen_background_light.jpg');
     background-repeat: no-repeat;
-
     color: whitesmoke;
     font-family: Segoe UI, Arial, sans-serif;
 }
@@ -30,7 +29,7 @@ h3 {
 
 input {
     color: #1f1f1f;
-    padding-left: 5px;
+    padding-left: 20px;
     border-radius: 15px;
     outline: none;
     text-align: right;
@@ -54,16 +53,18 @@ header {
 
 .inputCredentials {
     min-width: 350px;
-    margin:10px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .inputSelect {
     min-width: 195px;
 }
 
+
 /* Put the login bar on top of the dimmer */
+
 #loginBar {
-    position:relative;
+    position: relative;
     z-index: 12;
 }
 
@@ -72,7 +73,7 @@ header {
     top: 22px;
     font-size: 1.2em;
     left: 80px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .navbar-brand {
@@ -107,7 +108,7 @@ header {
 
 .clear {
     clear: both;
-    height:0;
+    height: 0;
     font-size: 1px;
     line-height: 0;
 }
@@ -116,9 +117,9 @@ header {
     background: rgba(247, 196, 143, 0.45) no-repeat center;
     background-size: cover;
     border: 1px solid saddlebrown;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     margin: 10px auto 10px auto;
     position: relative;
     color: whitesmoke;
@@ -136,23 +137,25 @@ header {
 }
 
 .contentDiv li {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
+
 /* Customize the tabs */
+
 .nav-tabs {
     margin-top: 25px;
     border-bottom: none;
 }
 
 .floatLeft {
-    position:relative;
-    float:left;
+    position: relative;
+    float: left;
 }
 
 .floatRight {
-    position:relative;
-    float:right;
+    position: relative;
+    float: right;
 }
 
 .nav-tabs>li {
@@ -161,7 +164,8 @@ header {
     border-top-right-radius: 4px;
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus  {
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus {
     color: #fefffd;
     cursor: default;
     background-color: rgba(140, 80, 60, 0.8);
@@ -169,12 +173,16 @@ header {
     border-bottom-color: transparent;
 }
 
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
     background-color: rgba(140, 80, 60, 0.8);
     border: 1px solid rgba(63, 63, 63, 0.74);
 }
 
-.nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .nav-tabs>li>a:hover {
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li>a:hover {
     color: #fefffd;
     cursor: default;
     background-color: rgba(140, 80, 60, 0.8);
@@ -199,17 +207,17 @@ header {
     color: #fefffd;
     background-color: rgba(255, 160, 48, 0.75);
     border-bottom-color: transparent;
-    background-image: url(img); /* this is the only way that I can get background-color to stick for some reason*/
+    background-image: url(img);
+    /* this is the only way that I can get background-color to stick for some reason*/
 }
 
 #queryTab .row {
-    margin-left:0;
+    margin-left: 0;
 }
 
 .queryInstructions {
     font-size: .9em;
 }
-
 
 .queryInstructions strong {
     color: #ffbb00;
@@ -217,7 +225,7 @@ header {
 
 .stepBox {
     padding: 10px 10px 25px 10px;
-    width:100%;
+    width: 100%;
     background-color: rgba(140, 80, 60, 0.5);
     position: relative;
     margin: 20px auto;
@@ -229,13 +237,13 @@ header {
 
 .stepText {
     position: relative;
-    float:left;
+    float: left;
     margin: 0 10px 10px 10px;
     padding: 10px;
     border: 1px solid saddlebrown;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius:10px;
+    border-radius: 10px;
     width: 45%;
     height: 85%;
     background: rgba(255, 187, 0, 0.9);
@@ -244,6 +252,8 @@ header {
 #setupTable th {
     width: 22% !important;
 }
+
+
 /*
 table {
     margin-top: 50px;
@@ -341,38 +351,40 @@ tbody td, thead th {
     margin: 0 auto;
 }
 
-
 #copyright {
-    padding:0;
+    padding: 0;
     text-align: center;
     margin: 5px auto;
     font-size: .7em;
-
 }
 
 input.currency {
     text-align: right;
     padding-right: 15px;
 }
+
 .input-group .form-control {
     float: none;
 }
+
 .input-group .input-buttons {
     position: relative;
     z-index: 3;
 }
 
 .settings-input {
-    width:500px;
+    width: 500px;
 }
 
-#seatSettings label, #phoneNumbers label, .checkbox label {
-    width:250px;
+#seatSettings label,
+#phoneNumbers label,
+.checkbox label {
+    width: 250px;
 }
 
 #customerSettings label {
-    width:280px;
-    font-size:1.2em;
+    width: 280px;
+    font-size: 1.2em;
 }
 
 #customerSettings input {
@@ -385,7 +397,7 @@ input.currency {
 }
 
 .input-group-addon:not(:first-child):not(:last-child) {
-    margin-left:3px;
+    margin-left: 3px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
@@ -399,12 +411,11 @@ input.currency {
 }
 
 .discount-group-addon {
-    height:33px;
+    height: 33px;
 }
 
 .quoteTable {
     table-layout: fixed;
-    width: 2320px;
 }
 
 .rounded-top-left {
@@ -423,69 +434,465 @@ input.currency {
     border-bottom-right-radius: 5px;
 }
 
-.cg1 { width: 150px }
-.cg2 { width: 150px }
-.cg3 { width: 150px }
-.cg4 { width: 150px }
-.cg5 { width: 150px }
-.cg6 { width: 150px }
-.cg7 { width: 190px }
-.cg8 { width: 150px }
-.cg9 { width: 150px }
-.cg10 { width: 150px }
-.cg11 { width: 150px }
+.cg1 {
+    width: 150px
+}
 
-.tg  {border-collapse:collapse;border-spacing:0;border-width:0;margin:0px auto;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#aaa;color:#333;background-color:#fff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#aaa;color:#fff;background-color:#f38630;}
-.tg .tg-ceei{background-color:#c851ec;color:#ffc702;text-align:right;vertical-align:top}
-.tg .tg-lb7c{font-size:18px;background-color:#f4f2ba;color:#986536;text-align:center;vertical-align:top}
-.tg .tg-yr5q{font-weight:bold;font-size:18px;background-color:#3166ff;color:#00009b;vertical-align:top}
-.tg .tg-00vd{font-weight:bold;font-size:18px;background-color:#f38630;color:#986536;text-align:right;vertical-align:bottom}
-.tg .tg-6w06{font-weight:bold;font-size:18px;background-color:#c851ec;color:#ffcb2f;text-align:right;vertical-align:top}
-.tg .tg-nqwm{font-size:18px;background-color:#d8f9d8;color:#009901;text-align:center;vertical-align:top}
-.tg .tg-3xcw{background-color:#f38630;vertical-align:top}
-.tg .tg-qcoe{font-size:18px;background-color:#ffe4e2;color:#9a0000;text-align:center;vertical-align:top}
-.tg .tg-znr0{font-weight:bold;font-size:18px;background-color:#f38630;color:#986536;vertical-align:top}
-.tg .tg-0nfl{background-color:#50d96c;color:#009901;border-top-left-radius:7px}
-.tg .tg-u4nh{font-size:18px;background-color:#3166ff;color:#00009b;vertical-align:top}
-.tg .tg-qi9z{background-color:#c851ec;color:#ffcb2f;text-align:right;vertical-align:top}
-.tg .tg-l779{background-color:#9523b8;vertical-align:top}
-.tg .tg-l778{background-color:#9523b8;vertical-align:top;border-bottom-left-radius:7px}
-.tg .tg-8fi1{background-color:#c851ec;vertical-align:top}
-.tg .tg-3gdc{font-weight:bold;font-size:18px;background-color:#50d96c;color:#009901}
-.tg .tg-h69r{font-weight:bold;font-size:18px;background-color:#fd6864;color:#9a0000;vertical-align:top}
-.tg .tg-mq97{font-weight:bold;font-size:18px;background-color:#3166ff;color:#00009b;text-align:right;vertical-align:bottom}
-.tg .tg-1szg{font-size:18px;background-color:#ae35b0;color:#ffcb2f;text-align:right;vertical-align:top}
-.tg .tg-pcbx{font-weight:bold;font-size:18px;background-color:#c851ec;color:#ffc702;text-align:right;vertical-align:bottom}
-.tg .tg-yxsg{font-size:18px;background-color:#f4f2ba;color:#cd9934;text-align:right;vertical-align:top}
-.tg .tg-6rl8{font-size:18px;background-color:#ffffc7;color:#986536;text-align:right;vertical-align:bottom}
-.tg .tg-ww66{font-weight:bold;font-size:18px;background-color:#50d96c;color:#009901;text-align:center}
-.tg .tg-ww67{font-weight:bold;font-size:18px;background-color:#50d96c;color:#009901;text-align:center;border-top-right-radius:7px}
-.tg .tg-y4mn{font-size:18px;background-color:#d8f9d8;color:#009901;text-align:center}
-.tg .tg-gk5o{font-weight:bold;font-size:18px;background-color:#50d96c;color:#009901;text-align:right;vertical-align:bottom}
-.tg .tg-pd7p{background-color:#f38630;color:#986536;vertical-align:top}
-.tg .tg-hw1d{background-color:#ffffc7;color:#986536;vertical-align:top}
-.tg .tg-yi9w{font-weight:bold;font-size:18px;background-color:#3166ff;color:#00009b;text-align:center;vertical-align:top}
-.tg .tg-6b5v{font-size:18px;background-color:#ecf4ff;color:#00009b;text-align:center;vertical-align:top}
-.tg .tg-ivrp{font-weight:bold;font-size:18px;background-color:#ffc702;color:#cd9934;text-align:center;vertical-align:top}
-.tg .tg-7cfi{background-color:#ffc702;vertical-align:top}
-.tg .tg-xl8y{font-weight:bold;font-size:18px;background-color:#ffc702;color:#986536;vertical-align:top}
-.tg .tg-488h{background-color:#f4f2ba;vertical-align:top}
-.tg .tg-dy1y{font-weight:bold;font-size:18px;background-color:#ffc702;color:#cd9934;text-align:right;vertical-align:bottom}
-.tg .tg-cv6f{font-weight:bold;font-size:18px;background-color:#fd6864;text-align:center;vertical-align:top}
-.tg .tg-2s1i{background-color:#fd6864;vertical-align:top}
-.tg .tg-4yv6{background-color:#ffe4e2;color:#9a0000;text-align:center;vertical-align:top}
-.tg .tg-oq8k{background-color:#ffe4e2;vertical-align:top}
-.tg .tg-ib9w{font-weight:bold;font-size:18px;background-color:#fd6864;color:#9a0000;text-align:right;vertical-align:bottom}
-.tg .tg-riad{font-weight:bold;font-size:18px;background-color:#ae35b0;color:#ffcb2f;text-align:right;vertical-align:top}
-.tg .tg-77vb{font-weight:bold;font-size:18px;background-color:#c851ec;color:#ffc702;text-align:right;vertical-align:top}
-.tg .tg-reyo{font-size:14px;background-color:#ae35b0;color:#ffcb2f;text-align:right;vertical-align:top}
-.tg .tg-hykm{font-size:18px;background-color:#c851ec;color:#ffc702;text-align:right;vertical-align:top}
-.tg .tg-hykm1{font-size:18px;background-color:#c851ec;color:#ffc702;text-align:right;vertical-align:top;border-bottom-right-radius:7px}
-.tg .tg-yw4l{vertical-align:top}
+.cg2 {
+    width: 150px
+}
 
-.ph  {border-collapse:collapse;border-spacing:0;border-color:#aaa;}
-.ph td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#aaa;color:#333;background-color:#fff;}
-.ph th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#aaa;color:#fff;background-color:#f38630;}
-.ph .ph-uy9o{font-size:18px}
+.cg3 {
+    width: 150px
+}
+
+.cg4 {
+    width: 150px
+}
+
+.cg5 {
+    width: 150px
+}
+
+.cg6 {
+    width: 150px
+}
+
+.cg7 {
+    width: 190px
+}
+
+.cg8 {
+    width: 150px
+}
+
+.cg9 {
+    width: 150px
+}
+
+.cg10 {
+    width: 150px
+}
+
+.cg11 {
+    width: 150px
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+    margin: 0px auto;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #aaa;
+    color: #333;
+    background-color: #fff;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #aaa;
+    color: #fff;
+    background-color: #f38630;
+}
+
+.tg .tg-ceei {
+    background-color: #c851ec;
+    color: #ffc702;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-lb7c {
+    font-size: 18px;
+    background-color: #f4f2ba;
+    color: #986536;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-yr5q {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #3166ff;
+    color: #00009b;
+    vertical-align: top
+}
+
+.tg .tg-00vd {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f38630;
+    color: #986536;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-6w06 {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #c851ec;
+    color: #ffcb2f;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-nqwm {
+    font-size: 18px;
+    background-color: #d8f9d8;
+    color: #009901;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-3xcw {
+    background-color: #f38630;
+    vertical-align: top
+}
+
+.tg .tg-qcoe {
+    font-size: 18px;
+    background-color: #ffe4e2;
+    color: #9a0000;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-znr0 {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f38630;
+    color: #986536;
+    vertical-align: top
+}
+
+.tg .tg-0nfl {
+    background-color: #50d96c;
+    color: #009901;
+    border-top-left-radius: 7px
+}
+
+.tg .tg-u4nh {
+    font-size: 18px;
+    background-color: #3166ff;
+    color: #00009b;
+    vertical-align: top
+}
+
+.tg .tg-qi9z {
+    background-color: #c851ec;
+    color: #ffcb2f;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-l779 {
+    background-color: #9523b8;
+    vertical-align: top
+}
+
+.tg .tg-l778 {
+    background-color: #9523b8;
+    vertical-align: top;
+    border-bottom-left-radius: 7px
+}
+
+.tg .tg-8fi1 {
+    background-color: #c851ec;
+    vertical-align: top
+}
+
+.tg .tg-3gdc {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #50d96c;
+    color: #009901
+}
+
+.tg .tg-h69r {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #fd6864;
+    color: #9a0000;
+    vertical-align: top;
+    border-bottom-left-radius: 7px
+}
+
+.tg .tg-mq97 {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #3166ff;
+    color: #00009b;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-1szg {
+    font-size: 18px;
+    background-color: #ae35b0;
+    color: #ffcb2f;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-pcbx {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #c851ec;
+    color: #ffc702;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-yxsg {
+    font-size: 18px;
+    background-color: #f4f2ba;
+    color: #cd9934;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-6rl8 {
+    font-size: 18px;
+    background-color: #ffffc7;
+    color: #986536;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-ww66 {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #50d96c;
+    color: #009901;
+    text-align: center
+}
+
+.tg .tg-ww67 {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #50d96c;
+    color: #009901;
+    text-align: center;
+    border-top-right-radius: 7px
+}
+
+.tg .tg-y4mn {
+    font-size: 18px;
+    background-color: #d8f9d8;
+    color: #009901;
+    text-align: center
+}
+
+.tg .tg-gk5o {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #50d96c;
+    color: #009901;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-pd7p {
+    background-color: #f38630;
+    color: #986536;
+    vertical-align: top
+}
+
+.tg .tg-hw1d {
+    background-color: #ffffc7;
+    color: #986536;
+    vertical-align: top
+}
+
+.tg .tg-yi9w {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #3166ff;
+    color: #00009b;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-6b5v {
+    font-size: 18px;
+    background-color: #ecf4ff;
+    color: #00009b;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-ivrp {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffc702;
+    color: #cd9934;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-7cfi {
+    background-color: #ffc702;
+    vertical-align: top
+}
+
+.tg .tg-xl8y {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffc702;
+    color: #986536;
+    vertical-align: top
+}
+
+.tg .tg-488h {
+    background-color: #f4f2ba;
+    vertical-align: top
+}
+
+.tg .tg-dy1y {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffc702;
+    color: #cd9934;
+    text-align: right;
+    vertical-align: bottom
+}
+
+.tg .tg-cv6f {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #fd6864;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-2s1i {
+    background-color: #fd6864;
+    vertical-align: top
+}
+
+.tg .tg-4yv6 {
+    background-color: #ffe4e2;
+    color: #9a0000;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-oq8k {
+    background-color: #ffe4e2;
+    vertical-align: top
+}
+
+.tg .tg-ib9w {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #fd6864;
+    color: #9a0000;
+    text-align: right;
+    vertical-align: bottom;
+    border-bottom-right-radius: 7px;
+}
+
+.tg .tg-riad {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ae35b0;
+    color: #ffcb2f;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-77vb {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #c851ec;
+    color: #ffc702;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-reyo {
+    font-size: 14px;
+    background-color: #ae35b0;
+    color: #ffcb2f;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-hykm {
+    font-size: 18px;
+    background-color: #c851ec;
+    color: #ffc702;
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-hykm1 {
+    font-size: 18px;
+    background-color: #c851ec;
+    color: #ffc702;
+    text-align: right;
+    vertical-align: top;
+    border-bottom-right-radius: 7px;
+}
+
+.tg .tg-yw4l {
+    vertical-align: top
+}
+
+.ph {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #aaa;
+}
+
+.ph td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #aaa;
+    color: #333;
+    background-color: #fff;
+}
+
+.ph th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 0px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #aaa;
+    color: #fff;
+    background-color: #f38630;
+}
+
+.ph .ph-uy9o {
+    font-size: 18px
+}
+
+.ph-031er {
+    text-align: right
+}
