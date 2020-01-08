@@ -1,54 +1,51 @@
 import React from 'react';
 
-const Phones = (props) => (
-  <div id="phonesTab" className="tab-pane fade">
-    <div id="phones" className="stepBox">
-      <div className="stepBox">
-        <h2>Phones and Accessories</h2>
-        <table className="ph">
-          <tbody>
-          <tr>
-            <th className="ph-uy9o rounded-top-left">Item</th>
-            <th className="ph-031e"></th>
-            <th className="ph-uy9o">Features</th>
-            <th className="ph-031e">MSRP</th>
-            <th className="ph-031e">Your Price</th>
-            <th className="ph-031e">Count</th>
-            <th className="ph-031e rounded-top-right">Subtotal</th>
-          </tr>
+const Phones = (props) => {
+  const hardware = [];
+  for(let i = 0; i < props.hardware.length; i++) {
+    hardware.push(
+      <tr key={i}>
+        <td className="ph-031e">{props.hardware[i].item}</td>
+        <td className="ph-031e"><img src={props.hardware[i].img}/></td>
+        <td className="ph-031e">{props.hardware[i].features[i]}</td>
+        <td className="ph-031er">{props.monetize(props.hardware[i].msrp)}</td>
+        <td className="ph-031er">{props.monetize(props.hardware[i].purchasePrice)}</td>
+        <td className="ph-031er">
+          <input
+            onChange={props.getHardware}
+            type="number" name={"hw" + i}
+            id={"hw" + i} min="0"
+            max="999" step="1"
+          />
+        </td>
+        <td className="ph-031er">{props.monetize(props.hardware[i].subtotal)}</td>
+      </tr>
+    );
+  }
 
-          <tr>
-            <td className="ph-031e">{props.hardware[0].item}</td>
-            <td className="ph-031e"><img src='http://localhost:8080/client/img/T41.jpg'/></td>
-            <td className="ph-031e">{props.hardware[0].features[0]}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[0].msrp)}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[0].purchasePrice)}</td>
-            <td className="ph-031e">{props.getHardware}</td>
-            <td className="ph-031e">{props.monetize(props.hardware.subtotal)}</td>
-          </tr>
-          <tr>
-            <td className="ph-031e">{props.hardware[1].item}</td>
-            <td className="ph-031e"><img src={props.hardware[1].img}/></td>
-            <td className="ph-031e">{props.hardware[1].features[0]}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[1].msrp)}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[1].purchasePrice)}</td>
-            <td className="ph-031e">{props.getHardware}</td>
-            <td className="ph-031e">{props.monetize(props.hardware.subtotal)}</td>
-          </tr>
-          <tr>
-            <td className="ph-031e">{props.hardware[2].item}</td>
-            <td className="ph-031e"><img src={props.hardware[2].img}/></td>
-            <td className="ph-031e">{props.hardware[2].features[2]}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[2].msrp)}</td>
-            <td className="ph-031e">{props.monetize(props.hardware[2].purchasePrice)}</td>
-            <td className="ph-031e">{props.getHardware}</td>
-            <td className="ph-031e">{props.monetize(props.hardware.subtotal)}</td>
-          </tr>
-          </tbody>
-        </table>
+  return(
+    <div id="phonesTab" className="tab-pane fade">
+      <div id="phones" className="stepBox">
+        <div className="stepBox">
+          <h2>Phones and Accessories</h2>
+          <table className="ph">
+            <tbody>
+            <tr>
+              <th className="ph-uy9o rounded-top-left">Item</th>
+              <th className="ph-031e"></th>
+              <th className="ph-uy9o">Features</th>
+              <th className="ph-031e">MSRP</th>
+              <th className="ph-031e">Your Price</th>
+              <th className="ph-031e">Count</th>
+              <th className="ph-031e rounded-top-right">Subtotal</th>
+            </tr>
+            {hardware}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default Phones;

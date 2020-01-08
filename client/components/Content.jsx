@@ -45,6 +45,7 @@ const Content = (props) => (
           totalService={props.totalService}
           hardware={props.hardware}
           getHardware={props.getHardware}
+          totalPhones={props.totalPhones}
         />
       </div>
     );

@@ -65,6 +65,7 @@ const TabContent = (props) => (
       monetize={props.monetize}
       totalSetup={props.totalSetup}
       totalService={props.totalService}
+      totalPhones={props.totalPhones}
     />
   </div>
   );
